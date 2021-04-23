@@ -17,4 +17,4 @@ phases:
       - echo $CODEBUILD_SRC_DIR
 artifacts:
   files:
-    - hello-docker-0.1.jar
+    - target/hello-docker-0.1.jar
