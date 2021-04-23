@@ -18,3 +18,4 @@ phases:
 artifacts:
   files:
     - target/hello-docker-0.1.jar
+    - echo Artifacts uploading completed on `date`
