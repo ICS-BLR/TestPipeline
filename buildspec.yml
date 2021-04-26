@@ -11,9 +11,6 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn install
-  cache:
-    paths:
-      - '/root/.m2/**/*'
   post_build:
     commands:
       - echo Build completed on `date`
@@ -22,3 +19,6 @@ artifacts:
   files:
     - target/hello-docker-0.1.jar
     - echo Artifacts uploading completed on `date`
+cache:
+  paths:
+    - '/root/.m2/**/*'
