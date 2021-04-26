@@ -88,6 +88,12 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<distributionManagement>
+		<repository>
+		  <id>zyter--telehealth</id>
+		  <name>zyter--telehealth</name>
+		  <url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
+		</repository>
+	  </distributionManagement>
 
 </project>
