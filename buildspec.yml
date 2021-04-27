@@ -15,7 +15,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn surefire-report:report #Running this task to execute unit tests and generate report.
-      #- mvn test -f pom.xml -fn
+      - mvn test -f pom.xml -fn
 artifacts:
   files:
     - target/hello-docker-0.1.jar
