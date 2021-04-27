@@ -31,7 +31,7 @@ reports: #New
   jacoco-report:
     files:
       - '**/*' 
-      base-directory: 'target/jacoco-reports' #- 'test-results/'
+    base-directory: 'target/jacoco-reports' #- 'test-results/'
     file-format: 'JACOCOXML'
   arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
     files:
