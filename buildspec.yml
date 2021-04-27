@@ -38,5 +38,5 @@ reports: #New
   #     - '**/*'
   #   #base-directory: 'target/simplecov-reports' # Location of the reports
   #   files:
-  #     - '**/*'
+  ##    - '**/*'
   #   file-format: 'SIMPLECOV'
