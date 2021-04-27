@@ -15,7 +15,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn surefire-report:report #Running this task to execute unit tests and generate report.
-      - mvn test -f pom.xml -fn
+      #- mvn test -f pom.xml -fn
 artifacts:
   files:
     - target/hello-docker-0.1.jar
@@ -31,7 +31,7 @@ reports: #New
   jacoco-report:
     files:
       - '**/*' 
-    #base-directory: 'target/jacoco-reports' #- 'test-results/'
+    base-directory: 'target/site/jacoco'
     file-format: 'JACOCOXML'
   # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
   #   files:
