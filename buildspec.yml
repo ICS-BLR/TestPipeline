@@ -30,13 +30,13 @@ reports: #New
     base-directory: 'target/surefire-reports' # Location of the reports
   jacoco-report:
     files:
-      - 'test-results/jacoco-coverage-report.xml'
+      - '**/*' 
+      base-directory: 'target/jacoco-reports' #- 'test-results/'
     file-format: 'JACOCOXML'
-
-  # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
-  #   files:
-  #     - '**/*'
-  #   base-directory: 'target/simplecov-reports' # Location of the reports
-  #   files:
-  #     - '**/*'
-  #   file-format: 'SIMPLECOV'
+  arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
+    files:
+      - '**/*'
+    base-directory: 'target/simplecov-reports' # Location of the reports
+    files:
+      - '**/*'
+    file-format: 'SIMPLECOV'

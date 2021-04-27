@@ -86,14 +86,32 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<distributionManagement>
 		<repository>
-		  <id>zyter--telehealth</id>
-		  <name>zyter--telehealth</name>
-		  <url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
+			<id>zyter--telehealth</id>
+			<name>zyter--telehealth</name>
+			<url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
 		</repository>
-	  </distributionManagement>
-
+	</distributionManagement>
 </project>
