@@ -29,5 +29,6 @@ reports: #New
     base-directory: 'target/surefire-reports' # Location of the reports
   arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
     files:
-      - 'test-results/jacoco-coverage-report.xml'
-    file-format: 'JACOCOXML'
+      - '**/*'
+      base-directory: 'target/simplecov-reports' # Location of the reports
+    file-format: 'SIMPLECOV'
