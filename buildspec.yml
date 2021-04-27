@@ -15,6 +15,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn surefire-report:report #Running this task to execute unit tests and generate report.
+      - mvn test -f pom.xml -fn
 artifacts:
   files:
     - target/hello-docker-0.1.jar
@@ -27,10 +28,15 @@ reports: #New
     files: #Store all of the files
       - '**/*'
     base-directory: 'target/surefire-reports' # Location of the reports
-  arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
+  jacoco-report:
     files:
-      - '**/*'
-    base-directory: 'target/simplecov-reports' # Location of the reports
-    files:
-      - '**/*'
-    file-format: 'SIMPLECOV'
+      - 'test-results/jacoco-coverage-report.xml'
+    file-format: 'JACOCOXML'
+
+  # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
+  #   files:
+  #     - '**/*'
+  #   base-directory: 'target/simplecov-reports' # Location of the reports
+  #   files:
+  #     - '**/*'
+  #   file-format: 'SIMPLECOV'
