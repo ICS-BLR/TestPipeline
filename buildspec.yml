@@ -38,7 +38,7 @@ reports: #New
     file-format: 'SIMPLECOV'
 artifacts:
   files:
-    - target/hello-docker-0.1.jar
-    - target/surefire-reports
-    - target/site/jacoco
+    - target/*
+#    - target/surefire-reports/*
+#    - target/site/jacoco/*
     - echo Artifacts uploading completed on `date`
