@@ -7,14 +7,14 @@ phases:
   pre_build:
     commands:
       - echo Update AWS CLI...
-      - pip3 install awscli --upgrade --user
+      #- pip3 install awscli --upgrade --user
   build:
     commands:
       - echo Build started on `date`
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain zyter --domain-owner 516804113156 --query authorizationToken --output text`
+      #- export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain zyter --domain-owner 516804113156 --query authorizationToken --output text`
       #- export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain ${CODEARTIFACT_DOMAIN} --query authorizationToken --output text`
-      #- mvn clean install
-      - mvn -s settings.xml clean package deploy
+      - mvn clean install
+      #- mvn -s settings.xml clean package deploy
   post_build:
     commands:
       - echo Build completed on `date`
