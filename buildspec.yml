@@ -13,7 +13,7 @@ phases:
       - echo Build started on `date`
       #- export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain zyter --domain-owner 516804113156 --query authorizationToken --output text`
       #- export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain ${CODEARTIFACT_DOMAIN} --query authorizationToken --output text`
-      - mvn -s settings.xml clean install
+      - mvn -s settings.xml install
       #- mvn -s settings.xml clean package deploy
   post_build:
     commands:
@@ -40,6 +40,7 @@ artifacts:
     - target/surefile-reports
     - target/site/jacoco
     - echo Artifacts uploading completed on `date`
+    - /root/.m2/**/*
   # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
   #   files:
   #     - '**/*'
