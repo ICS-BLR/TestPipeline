@@ -1,0 +1,37 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<localRepository/>
+	<interactiveMode/>
+	<offline/>
+	<pluginGroups/>
+	<servers>
+		<server>
+			<id>zyter-telehealth</id>
+			<username>aws</username>
+			<password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+		</server>
+	</servers>
+	<mirrors>
+		<mirror>
+			<id>zyter-telehealth</id>
+			<name>zyter-telehealth</name>
+			<url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
+	<proxies/>
+	<profiles>
+		<profile>
+			<id>zyter-telehealth</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>zyter-telehealth</id>
+					<url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+	<activeProfiles/>
+</settings>
