@@ -11,13 +11,12 @@
 		</server>
 	</servers>
 	<mirrors>
-		<!-- DO NOT NEED TO CREATE MIRROR AS OF NOW -->
-		<!-- <mirror>
+		<mirror>
 			<id>zyter-telehealth</id>
 			<name>zyter-telehealth</name>
 			<url>https://zyter-516804113156.d.codeartifact.ap-south-1.amazonaws.com/maven/telehealth/</url>
 			<mirrorOf>*</mirrorOf>
-		</mirror> -->
+		</mirror>
 	</mirrors>
 	<proxies/>
 	<profiles>
