@@ -4,7 +4,7 @@
 
 	<groupId>com.example.howtodoinjava</groupId>
 	<artifactId>hello-docker</artifactId>
-	<version>0.1</version>
+	<version>0.3</version>
 	<packaging>jar</packaging>
 
 	<name>hello-docker</name>

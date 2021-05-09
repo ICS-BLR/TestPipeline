@@ -24,6 +24,7 @@ phases:
 cache:
   paths:
     - '/root/.m2/**/*'
+    - 'build/**/*'
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".
     files: #Store all of the files
@@ -31,7 +32,7 @@ reports: #New
     base-directory: 'target/surefire-reports' # Location of the reports
   jacoco-report:
     files:
-      - '**/*' 
+      - '**/*'
     base-directory: 'target/site/jacoco'
     file-format: 'JACOCOXML'
 artifacts:
@@ -40,7 +41,6 @@ artifacts:
     - target/surefile-reports
     - target/site/jacoco
     - echo Artifacts uploading completed on `date`
-    - /root/.m2/**/*
   # arn:aws:codebuild:ap-south-1:516804113156:report-group/test-report-group-code-coverage:
   #   files:
   #     - '**/*'
