@@ -13,18 +13,16 @@ phases:
       - echo Build started on `date`
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain zyter --domain-owner 516804113156 --query authorizationToken --output text`
       #- export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain ${CODEARTIFACT_DOMAIN} --query authorizationToken --output text`
-      - mvn -s settings.xml install
+      - mvn -s settings.xml package
       #- mvn -s settings.xml clean package deploy
   post_build:
     commands:
       - echo Build completed on `date`
-      # - mvn surefire-report:report #Running this task to execute unit tests and generate report.
-      # - mvn jacoco:report #Generating jacoco report
       #- mvn test -f pom.xml -fn
 cache:
   paths:
     - '/root/.m2/**/*'
-    - 'build/**/*'
+    #- 'build/**/*'
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".
     files: #Store all of the files
