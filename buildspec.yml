@@ -20,7 +20,7 @@ phases:
       - echo Build completed on `date`
       - mvn surefire-report:report #Running this task to execute unit tests and generate report.
       - mvn jacoco:report #Generating jacoco report
-      - mvn test -f pom.xml -fn
+      #- mvn test -f pom.xml -fn
 cache:
   paths:
     - '/root/.m2/**/*'
